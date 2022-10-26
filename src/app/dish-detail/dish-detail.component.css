@@ -1,0 +1,15 @@
+.container{
+  display: flex;
+padding-top: 30px;
+}
+.comments{
+padding-top: 15px;
+padding-left: 50px;
+width:40%;
+}
+.comment{
+  margin-bottom: 30px;
+}
+.card{
+  width:40%;
+}

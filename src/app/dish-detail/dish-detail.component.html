@@ -1,0 +1,36 @@
+<div class="container" xmlns="http://www.w3.org/1999/html">
+
+    <div *ngIf="dish" class="card">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <h3>{{dish.name | uppercase}}</h3>
+          </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src={{dish.image}} alt={{dish.name}}>
+        <mat-card-content>
+          <p>
+            {{dish.description}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  <div class="comments">
+    <div *ngIf="dish">
+      <h3>Comments</h3>
+      <div *ngFor="let comment of dish.comments">
+        <div class="comment">
+          <span>{{comment.comment}}</span><br>
+          <span>{{comment.rating}} Stars</span><br>
+          <span>-- {{comment.author}}{{comment.date}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
